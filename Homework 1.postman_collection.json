@@ -1,0 +1,49 @@
+{
+	"id": "821b7615-fb78-604e-d581-154147e859e1",
+	"name": "Homework 1",
+	"description": "",
+	"order": [
+		"3f230673-9311-315f-a71b-4be85399dd30",
+		"bb436466-c3d8-e70f-1527-70060f7c7700"
+	],
+	"folders": [],
+	"timestamp": 1486092386937,
+	"owner": "1502163",
+	"public": false,
+	"requests": [
+		{
+			"id": "3f230673-9311-315f-a71b-4be85399dd30",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "var response = JSON.parse(responseBody);\nvar containsFlag = true;\n\nfor (var i = 0; i < response.items[i].length; i++)\n{\n    if (!response.items.volumeInfo.title.includes(\"Turing\"))\n        containsFlag = false;\n}\n\nvar id = response.items[0].id;\nconsole.log(\"Book id:\" + id);\n\npostman.setEnvironmentVariable(\"book_id\", id);\n\n\ntests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"Test\"] = environment.book_id === id;\ntests[\"Title contains turing\"] = containsFlag;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1486591714234,
+			"name": "HW1",
+			"description": "",
+			"collectionId": "821b7615-fb78-604e-d581-154147e859e1"
+		},
+		{
+			"id": "bb436466-c3d8-e70f-1527-70060f7c7700",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes/{{book_id}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "var response = JSON.parse(responseBody);\nvar containsFlag = false;\n\ncontainsFlag = (response.id === environment.book_id);\n    \n\n\ntests[\"Status code is 200\"] = responseCode.code === 200;\ntests[\"Response contains ID from request\"] = containsFlag;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1486593003537,
+			"name": "HW1-Chained",
+			"description": "",
+			"collectionId": "821b7615-fb78-604e-d581-154147e859e1"
+		}
+	]
+}
