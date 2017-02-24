@@ -1,0 +1,208 @@
+{
+	"id": "3a1f1788-c173-c713-bd81-63e835f60084",
+	"name": "Homework 2",
+	"description": null,
+	"order": [
+		"3cda88af-42a3-a273-a355-a8082d66d9dd",
+		"dff43eb8-4ce0-92ec-ec04-74fe2cc92eb1",
+		"c38c08b5-affa-ffa7-01d8-f448b650c6e5",
+		"7c953e00-48c7-c1a7-fe30-b11a2a702375",
+		"7bf1e72f-009b-0b14-ba08-4a45a9044eb2",
+		"4b75feae-072d-2640-e6fb-62c606b995cc",
+		"f3c95d60-6bd2-06f7-7553-bca9a1ec6b05",
+		"07c2c74a-19c0-8956-ed2b-d665f2f61ff6",
+		"c5432f71-6855-8278-ee55-9fd022a08e81"
+	],
+	"folders": [],
+	"timestamp": 0,
+	"owner": "1502163",
+	"public": false,
+	"requests": [
+		{
+			"id": "07c2c74a-19c0-8956-ed2b-d665f2f61ff6",
+			"headers": "",
+			"url": "http://kelseyrocklin-test.apigee.net/hw2/puts",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Request is bad\"] = responseCode.code === 400;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487894128736,
+			"name": "GET to puts",
+			"description": "",
+			"collectionId": "3a1f1788-c173-c713-bd81-63e835f60084"
+		},
+		{
+			"id": "3cda88af-42a3-a273-a355-a8082d66d9dd",
+			"headers": "",
+			"url": "http://kelseyrocklin-test.apigee.net/hw2/gets",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Request is good\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487894033060,
+			"name": "GET to gets",
+			"description": "",
+			"collectionId": "3a1f1788-c173-c713-bd81-63e835f60084"
+		},
+		{
+			"id": "4b75feae-072d-2640-e6fb-62c606b995cc",
+			"headers": "",
+			"url": "http://kelseyrocklin-test.apigee.net/hw2/gets",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Request is bad\"] = responseCode.code === 400;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487894172744,
+			"name": "POST to gets",
+			"description": "",
+			"collectionId": "3a1f1788-c173-c713-bd81-63e835f60084"
+		},
+		{
+			"id": "7bf1e72f-009b-0b14-ba08-4a45a9044eb2",
+			"headers": "",
+			"url": "http://kelseyrocklin-test.apigee.net/hw2",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Request is bad\"] = responseCode.code === 400;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487894403371,
+			"name": "GET base api",
+			"description": "",
+			"collectionId": "3a1f1788-c173-c713-bd81-63e835f60084"
+		},
+		{
+			"id": "7c953e00-48c7-c1a7-fe30-b11a2a702375",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://kelseyrocklin-test.apigee.net/hw2/deletes",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "param",
+					"value": "test",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "tests[\"Request is good\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487894080181,
+			"name": "DELETE to deletes",
+			"description": "",
+			"collectionId": "3a1f1788-c173-c713-bd81-63e835f60084"
+		},
+		{
+			"id": "c38c08b5-affa-ffa7-01d8-f448b650c6e5",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://kelseyrocklin-test.apigee.net/hw2/puts",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [
+				{
+					"key": "param1",
+					"value": "test1",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "param2",
+					"value": "test2",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "tests[\"Request is good\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487894054198,
+			"name": "PUT to puts",
+			"description": "",
+			"collectionId": "3a1f1788-c173-c713-bd81-63e835f60084"
+		},
+		{
+			"id": "c5432f71-6855-8278-ee55-9fd022a08e81",
+			"headers": "",
+			"url": "http://kelseyrocklin-test.apigee.net/hw2/deletes",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Request is bad\"] = responseCode.code === 400;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487894113045,
+			"name": "GET to deletes",
+			"description": "",
+			"collectionId": "3a1f1788-c173-c713-bd81-63e835f60084"
+		},
+		{
+			"id": "dff43eb8-4ce0-92ec-ec04-74fe2cc92eb1",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "http://kelseyrocklin-test.apigee.net/hw2/posts?test=test1",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "param1",
+					"value": "test1234",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "param2",
+					"value": "test2",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "tests[\"Request is good\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487894030668,
+			"name": "POST to posts",
+			"description": "",
+			"collectionId": "3a1f1788-c173-c713-bd81-63e835f60084"
+		},
+		{
+			"id": "f3c95d60-6bd2-06f7-7553-bca9a1ec6b05",
+			"headers": "",
+			"url": "http://kelseyrocklin-test.apigee.net/hw2/posts",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Request is bad\"] = responseCode.code === 400;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487894157838,
+			"name": "GET to posts",
+			"description": "",
+			"collectionId": "3a1f1788-c173-c713-bd81-63e835f60084"
+		}
+	]
+}
